@@ -1,0 +1,107 @@
+@import "mixins", "variables";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  background: linear-gradient(135deg, hsl(12, 71%, 99%), hsl(0, 100%, 98%));
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/bg-pattern-desktop.svg");
+
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  @include font-weight(normal);
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    background-position: center;
+    background-size: auto 100vh;
+  }
+}
+
+.header {
+  margin: 20px;
+  align-self: flex-start;
+  @include tablet {
+    grid-column: 1/2;
+    margin: 65px 0 0 10vw;
+  }
+  &__img {
+    width: 158px;
+    height: 33px;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 250px;
+  background-image: url("../images/hero-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include tablet {
+    width: 40vw;
+    height: 100vh;
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    background-image: url("../images/hero-desktop.jpg");
+  }
+}
+
+.errMessage {
+  opacity: 0;
+  padding-left: 5vw;
+  padding-top: 1vh;
+  text-align: start;
+  color: $primary-soft-red;
+  transition: all 0.2s;
+  @include tablet {
+    padding-left: 1.5vw;
+  }
+  &--show {
+    opacity: 1;
+  }
+}
+
+.footer {
+  margin: 50px auto 8px;
+  font-size: 12px;
+  text-align: center;
+  align-self: end;
+  color: $grayish-red;
+  @include tablet {
+    margin: 15px;
+    grid-column: 1/2;
+  }
+  a {
+    color: $grayish-red;
+    &:visited {
+      color: $grayish-red;
+    }
+  }
+}
+
+.screen-reader-text {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  overflow: hidden;
+  word-wrap: normal !important;
+}
+@import "main", "form";

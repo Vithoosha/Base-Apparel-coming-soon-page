@@ -1,0 +1,43 @@
+.main {
+  padding: 0 40px;
+  text-align: center;
+  @include tablet {
+    grid-column: 1/2;
+    margin-left: 10vw;
+    margin-right: 25px;
+    padding: 0;
+    text-align: start;
+  }
+  &__title {
+    margin: 50px auto 18px;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    line-height: 50px;
+    @include font-weight(bold);
+    color: $grayish-red;
+    > span {
+      @include font-weight(thin);
+      color: $primary-red;
+    }
+    @include tablet {
+      width: 400px;
+      margin: 0;
+      text-align: start;
+      font-size: 60px;
+      line-height: 65px;
+      letter-spacing: 20px;
+    }
+  }
+
+  &__text {
+    color: $primary-red;
+    line-height: 23px;
+    @include tablet {
+      max-width: 445px;
+      margin: 25px 0 45px 0;
+      line-height: 28px;
+    }
+  }
+}

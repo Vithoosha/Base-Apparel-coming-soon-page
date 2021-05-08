@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img class="header__img" src="./images/logo.svg" alt="Base Apparel" />
+      </header>
+
+      <div class="hero"></div>
+
+      <main class="main">
+        <h1 class="main__title"><span>We're</span> coming soon</h1>
+        <p class="main__text">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <form class="form" target="_self">
+          <label for="email" class="screen-reader-text">Email Address</label>
+          <input
+            type="email"
+            class="form__input"
+            id="email"
+            name="email"
+            autocomplete="off"
+            placeholder="Email Address"
+            required
+          />
+          <img
+            src="./images/icon-error.svg"
+            alt="wrong email"
+            class="form__error"
+          />
+          <button class="form__btn" type="submit">
+            <img src="./images/icon-arrow.svg" alt="Send" />
+          </button>
+        </form>
+        <p class="errMessage">Please provide a valid email</p>
+      </main>
+
+      <footer class="footer">
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://github.com/Vithoosha">Vithoosha</a>.
+        </p>
+      </footer>
+    </div>
+  </body>
+  <script src="./script/script.js"></script>
+</html>
